@@ -7,6 +7,7 @@ import { SmurfContext } from '../contexts/SmurfContext';
 
 //components
 import SmurfsC from './SmurfsC';
+import MainForm from './MainForm';
 
 function App() {
   const [smurf, setSmurf] = useState([])
@@ -26,10 +27,10 @@ function App() {
       <div className="App">
         <SmurfContext.Provider value= {{smurf}}>
           <h1>SMURFS! 2.0 W/ Context</h1>
-          <div>Welcome to your state management version of Smurfs!</div>
-          <div>Start inside of your `src/index.js` file!</div>
+          <div>Welcome to Thatcher Phan's state management version of Smurfs!</div>
           <div>Have fun!</div>
           <SmurfsC/>
+          <MainForm/>
         </SmurfContext.Provider>
       </div>
     );
