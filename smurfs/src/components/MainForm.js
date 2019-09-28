@@ -26,6 +26,15 @@ export default class Mainform extends React.Component {
 
         console.log(newSmurf)
 
+        axios
+            .post('http://localhost:3333/smurfs', newSmurf)
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.log("error in post", err)
+            })
+            window.location.reload()
 
     }
 
